@@ -19,3 +19,24 @@ C:\Users\Mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-
 C:\Users\Mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.pdb
 C:\Users\Mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.genruntimeconfig.cache
 C:\Users\Mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\ref\Projekti.dll
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\MainWindow.g.cs
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\App.g.cs
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti_MarkupCompile.cache
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti_MarkupCompile.lref
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.dll
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\refint\Projekti.dll
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.pdb
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\bin\Debug\net9.0-windows\Projekti.exe
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\bin\Debug\net9.0-windows\Projekti.deps.json
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\bin\Debug\net9.0-windows\Projekti.runtimeconfig.json
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\bin\Debug\net9.0-windows\Projekti.dll
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\bin\Debug\net9.0-windows\Projekti.pdb
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\MainWindow.baml
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.g.resources
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.AssemblyInfoInputs.cache
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.AssemblyInfo.cs
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.csproj.CoreCompileInputs.cache
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.sourcelink.json
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.genruntimeconfig.cache
+C:\Users\nikot\Desktop\Koulu\Ohjelmistokehitys\Project\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\ref\Projekti.dll

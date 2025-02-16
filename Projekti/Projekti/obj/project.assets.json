@@ -8,23 +8,23 @@
     "net9.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\Mauri\\.nuget\\packages\\": {},
+    "C:\\Users\\nikot\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\Projekti.csproj",
+      "projectUniqueName": "C:\\Users\\nikot\\Desktop\\Koulu\\Ohjelmistokehitys\\Project\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
       "projectName": "Projekti",
-      "projectPath": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\Projekti.csproj",
-      "packagesPath": "C:\\Users\\Mauri\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\obj\\",
+      "projectPath": "C:\\Users\\nikot\\Desktop\\Koulu\\Ohjelmistokehitys\\Project\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
+      "packagesPath": "C:\\Users\\nikot\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\nikot\\Desktop\\Koulu\\Ohjelmistokehitys\\Project\\ToDoList---Projekti\\Projekti\\Projekti\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Mauri\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\nikot\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
