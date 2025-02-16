@@ -17,6 +17,7 @@ namespace Projekti
     /// </summary>
     public partial class MainWindow : Window
     {
+        List<string> lista = [];
         public MainWindow()
         {
             InitializeComponent();
@@ -29,6 +30,19 @@ namespace Projekti
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var teksti = textbox.Text;
+            lista.Add(teksti);
+            listbox.ItemsSource = null;
+            listbox.ItemsSource = lista;
+        }
+        private void remove_Click(object sender, RoutedEventArgs e)
+        {
+            lista.Remove(listbox.SelectedItem.ToString());
+            listbox.ItemsSource = null;
+            listbox.ItemsSource = lista;
+        }
+        private void listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
@@ -50,6 +64,11 @@ namespace Projekti
                 Paiva.Content = DateTime.Now.ToString("dd-MM-yyyy");
             };
             timer.Start();
+        }
+
+        private void textbox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }
