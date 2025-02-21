@@ -17,7 +17,18 @@ namespace Projekti
     /// </summary>
     public partial class MainWindow : Window
     {
-        List<string> lista = [];
+        public void kupdate()
+        {
+            kesken.ItemsSource = null;
+            kesken.ItemsSource = klista;
+        }
+        public void vupdate()
+        {
+            valmiit.ItemsSource = null;
+            valmiit.ItemsSource = vlista;
+        }
+        List<string> klista = [];
+        List<string> vlista = [];
         public MainWindow()
         {
             InitializeComponent();
@@ -29,28 +40,45 @@ namespace Projekti
 
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void lisää_Click(object sender, RoutedEventArgs e)
         {
             var teksti = textbox.Text;
-            lista.Add(teksti);
-            listbox.ItemsSource = null;
-            listbox.ItemsSource = lista;
+            klista.Add(teksti);
+            kupdate();
         }
-        private void remove_Click(object sender, RoutedEventArgs e)
+        private void siirrä_Click(object sender, RoutedEventArgs e)
         {
-            lista.Remove(listbox.SelectedItem.ToString());
-            listbox.ItemsSource = null;
-            listbox.ItemsSource = lista;
+            if(kesken.SelectedItem != null)
+            {
+                vlista.Add(kesken.SelectedItem.ToString());
+                klista.Remove(kesken.SelectedItem.ToString());
+                vupdate();
+                kupdate();
+            }
+            else if (valmiit.SelectedItem != null)
+            {
+                klista.Add(valmiit.SelectedItem.ToString());
+                vlista.Remove(valmiit.SelectedItem.ToString());
+                vupdate();
+                kupdate();
+            }
         }
-        private void listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void poista_Click(object sender, RoutedEventArgs e)
         {
-
+            if(valmiit.SelectedItem != null)
+            {
+                vlista.Remove(valmiit.SelectedItem.ToString());
+                vupdate();
+            }
+                
+            else if(kesken.SelectedItem != null)
+            {
+                klista.Remove(kesken.SelectedItem.ToString());
+                kupdate();
+            }
         }
-
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
-
-        }
+        
+        
 
         private DispatcherTimer timer = new DispatcherTimer();
 
