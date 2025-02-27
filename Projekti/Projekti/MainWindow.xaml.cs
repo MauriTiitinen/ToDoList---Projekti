@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Collections.ObjectModel;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -17,22 +18,24 @@ namespace Projekti
     /// </summary>
     public partial class MainWindow : Window
     {
+        private ObservableCollection<string> vlista = new ObservableCollection<string>();
+        private ObservableCollection<string> klista = new ObservableCollection<string>();
         public void kupdate()
         {
-            kesken.ItemsSource = null;
             kesken.ItemsSource = klista;
         }
         public void vupdate()
         {
-            valmiit.ItemsSource = null;
             valmiit.ItemsSource = vlista;
         }
-        List<string> klista = [];
-        List<string> vlista = [];
         public MainWindow()
         {
             InitializeComponent();
             StartClock();
+            vlista = VTallentaja.LueValmiit();
+            valmiit.ItemsSource = vlista;
+            klista = KTallentaja.LueKesken();
+            kesken.ItemsSource = klista;
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
@@ -45,6 +48,7 @@ namespace Projekti
             var teksti = textbox.Text;
             klista.Add(teksti);
             kupdate();
+            KTallentaja.Tallenna(klista);
         }
         private void siirrä_Click(object sender, RoutedEventArgs e)
         {
@@ -54,6 +58,8 @@ namespace Projekti
                 klista.Remove(kesken.SelectedItem.ToString());
                 vupdate();
                 kupdate();
+                VTallentaja.Tallenna(vlista);
+                KTallentaja.Tallenna(klista);
             }
             else if (valmiit.SelectedItem != null)
             {
@@ -61,6 +67,8 @@ namespace Projekti
                 vlista.Remove(valmiit.SelectedItem.ToString());
                 vupdate();
                 kupdate();
+                VTallentaja.Tallenna(vlista);
+                KTallentaja.Tallenna(klista);
             }
         }
         private void poista_Click(object sender, RoutedEventArgs e)
@@ -69,12 +77,14 @@ namespace Projekti
             {
                 vlista.Remove(valmiit.SelectedItem.ToString());
                 vupdate();
+                VTallentaja.Tallenna(vlista);
             }
                 
             else if(kesken.SelectedItem != null)
             {
                 klista.Remove(kesken.SelectedItem.ToString());
                 kupdate();
+                KTallentaja.Tallenna(klista);
             }
         }
         
