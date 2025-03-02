@@ -20,14 +20,6 @@ namespace Projekti
     {
         private ObservableCollection<string> vlista = new ObservableCollection<string>();
         private ObservableCollection<string> klista = new ObservableCollection<string>();
-        public void kupdate()
-        {
-            kesken.ItemsSource = klista;
-        }
-        public void vupdate()
-        {
-            valmiit.ItemsSource = vlista;
-        }
         public MainWindow()
         {
             InitializeComponent();
@@ -37,38 +29,33 @@ namespace Projekti
             klista = KTallentaja.LueKesken();
             kesken.ItemsSource = klista;
         }
-
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
         private void lisää_Click(object sender, RoutedEventArgs e)
         {
-            var teksti = textbox.Text;
-            klista.Add(teksti);
-            kupdate();
-            KTallentaja.Tallenna(klista);
-        }
-        private void siirrä_Click(object sender, RoutedEventArgs e)
-        {
-            if(kesken.SelectedItem != null)
+            if(textbox.Text != null && !string.IsNullOrWhiteSpace(textbox.Text))
             {
-                vlista.Add(kesken.SelectedItem.ToString());
-                klista.Remove(kesken.SelectedItem.ToString());
-                vupdate();
-                kupdate();
-                VTallentaja.Tallenna(vlista);
+                klista.Add(textbox.Text);
+                textbox.Clear();
                 KTallentaja.Tallenna(klista);
             }
-            else if (valmiit.SelectedItem != null)
+        }
+        private void CheckBox_Checked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox checkBox && checkBox.DataContext is string tehtävä)
             {
-                klista.Add(valmiit.SelectedItem.ToString());
-                vlista.Remove(valmiit.SelectedItem.ToString());
-                vupdate();
-                kupdate();
-                VTallentaja.Tallenna(vlista);
+                vlista.Add(tehtävä);
+                klista.Remove(tehtävä);
                 KTallentaja.Tallenna(klista);
+                VTallentaja.Tallenna(vlista);
+            }     
+        }
+        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
+        {
+            if (sender is CheckBox checkBox && checkBox.DataContext is string tehtävä)
+            {
+                klista.Add(tehtävä);
+                vlista.Remove(tehtävä);
+                KTallentaja.Tallenna(klista);
+                VTallentaja.Tallenna(vlista);
             }
         }
         private void poista_Click(object sender, RoutedEventArgs e)
@@ -76,14 +63,12 @@ namespace Projekti
             if(valmiit.SelectedItem != null)
             {
                 vlista.Remove(valmiit.SelectedItem.ToString());
-                vupdate();
                 VTallentaja.Tallenna(vlista);
             }
                 
             else if(kesken.SelectedItem != null)
             {
                 klista.Remove(kesken.SelectedItem.ToString());
-                kupdate();
                 KTallentaja.Tallenna(klista);
             }
         }
@@ -105,6 +90,11 @@ namespace Projekti
         }
 
         private void textbox_TextChanged_2(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
         {
 
         }
