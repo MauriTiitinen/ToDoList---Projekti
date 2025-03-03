@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\todolist\\todolist---projekti\\projekti\\projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\todolist\\todolist---projekti\\projekti\\projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\todolist\\todolist---projekti\\projekti\\projekti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\todolist\\todolist---projekti\\projekti\\projekti\\tallentaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\tallentaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\todolist\\todolist---projekti\\projekti\\projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\todolist\\todolist---projekti\\projekti\\projekti\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -30,11 +34,11 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\App.xaml",
               "RelativeDocumentMoniker": "Projekti\\App.xaml",
@@ -46,20 +50,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\App.xaml.cs",
               "RelativeDocumentMoniker": "Projekti\\App.xaml.cs",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\App.xaml.cs",
               "RelativeToolTip": "Projekti\\App.xaml.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:04:33.291Z",
+              "WhenOpened": "2025-02-16T14:04:33.291Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Window1.xaml",
+              "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml",
+              "RelativeDocumentMoniker": "Projekti\\Window1.xaml",
+              "ToolTip": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml*",
+              "RelativeToolTip": "Projekti\\Window1.xaml*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-03-03T13:55:07.771Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Projekti\\MainWindow.xaml",
@@ -71,26 +86,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "Projekti\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml.cs",
               "RelativeToolTip": "Projekti\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAA0AAAAAAAAAAAAUwCYAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAEwAAAAAAAAAAAAQwGsAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-16T13:33:30.309Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "Tallentaja.cs",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Tallentaja.cs",
               "RelativeDocumentMoniker": "Projekti\\Tallentaja.cs",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Tallentaja.cs",
               "RelativeToolTip": "Projekti\\Tallentaja.cs",
-              "ViewState": "AgIAAA4AAAAAAAAAAAAQwEcAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAxwCcAAAA6AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-27T18:12:37.825Z",
               "EditorCaption": ""

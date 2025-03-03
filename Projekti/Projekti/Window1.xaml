@@ -1,0 +1,19 @@
+﻿<Window x:Class="Projekti.Window1"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekti"
+        mc:Ignorable="d"
+        Title="Window1" Height="400" Width="400">
+        
+    <Grid>
+        <Label Margin="40,37,260,319" Content="Tehtävä:"/>
+        <TextBox Margin="40,65,40,257" />
+        <Label Margin="40,127,283,228" Content="Muistutus:"/>
+        <DatePicker Margin="40,156,40,200"></DatePicker>
+        
+        <Button Margin="116,219,116,101" Click="Button_Click" Content="Lisää tehtävä"/>
+
+    </Grid>
+</Window>

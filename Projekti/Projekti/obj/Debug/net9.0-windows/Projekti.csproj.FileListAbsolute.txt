@@ -61,3 +61,5 @@ C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\
 C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.pdb
 C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Projekti.genruntimeconfig.cache
 C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\ref\Projekti.dll
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Window1.g.cs
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\Window1.baml

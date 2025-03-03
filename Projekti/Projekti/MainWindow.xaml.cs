@@ -98,5 +98,11 @@ namespace Projekti
         {
 
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Window1 win1 = new Window1();
+            win1.Show();
+        }
     }
 }
