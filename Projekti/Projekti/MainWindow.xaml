@@ -13,7 +13,7 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="Kello" HorizontalAlignment="Left" Margin="270,357,0,0" VerticalAlignment="Top" Width="104" Height="33" Grid.Column="1"/>
         <Label x:Name="Paiva" FontSize="14" HorizontalAlignment="Left" Margin="237,401,0,10" Width="115" Grid.Column="1"/>
-        <Button Content="Asetukset" Margin="247,13,35,375" RenderTransformOrigin="2.683,-0.951" Grid.Column="1">
+        <Button Content="Asetukset" Margin="247,13,35,375" RenderTransformOrigin="2.683,-0.951" Grid.Column="1" Click="Button_Click_1">
             <Button.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>

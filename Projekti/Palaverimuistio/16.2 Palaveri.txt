@@ -1,0 +1,3 @@
+16.2 Palaveri
+
+Kävimme läpi UI:n luomisen. Suunnittelimme sopivan näköisen asetelman sekä toimintojen sijainnit kyseisessä asetelmassa. Tässä palaverissa suunnittelimme myös kuinka työmme jakautuu nyt kun on helpompi hahmottaa miten työt voidaan jakaa. Vaikeimmat osiot työssä ovat checkbox tyyppinen merkintä ominaisuus sekä asetusten valikko. Siksipä päätimme, että jaamme tehtävän kahteen osaan ja jaamme myöhemmin vielä nämä osiin. Suunniteltuamme UI:n lisäsimme kyseisen pohjan projektiimme. 
