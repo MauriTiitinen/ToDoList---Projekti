@@ -1,0 +1,13 @@
+Loimme Git-repositorion ja suunnittelimme mitä haluamme projektiksi luoda. Päätimme, että teemme To-Do-Listan. Keskustelimme ohjelmiston ominaisuuksista. 
+
+Halutut ominaisuudet
+- Lisäys ja poisto toiminto
+- Fontin koon muuttaminen
+- Erillinen listaus tehdyille ja keskeneräisille toimille
+- Kellonaika sekä päivämäärä
+- Muistutus ominaisuus
+- Asetukset
+- Checkboxi tehtäville
+
+Mahdollisia ominaisuuksia
+- Toistavat muistutukset
