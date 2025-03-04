@@ -20,6 +20,9 @@ namespace Projekti
     {
         private ObservableCollection<string> vlista = new ObservableCollection<string>();
         private ObservableCollection<string> klista = new ObservableCollection<string>();
+
+
+        private ContextMenu settingsMenu;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,7 +31,65 @@ namespace Projekti
             valmiit.ItemsSource = vlista;
             klista = KTallentaja.LueKesken();
             kesken.ItemsSource = klista;
+
+            settingsMenu = new ContextMenu();
+
+            // Create menu items
+            MenuItem generalItem = new MenuItem { Header = "General Settings" };
+            generalItem.Click += GeneralSettings_Click;
+
+            MenuItem appearanceItem = new MenuItem { Header = "Appearance Settings" };
+            appearanceItem.Click += AppearanceSettings_Click;
+
+            MenuItem advancedItem = new MenuItem { Header = "Advanced Settings" };
+            advancedItem.Click += AdvancedSettings_Click;
+
+            // Add items to the menu
+            settingsMenu.Items.Add(generalItem);
+            settingsMenu.Items.Add(appearanceItem);
+            settingsMenu.Items.Add(advancedItem);
         }
+
+        private void SettingsButton_Click(object sender, RoutedEventArgs e)
+        {
+            // Toggle the menu
+            if (settingsMenu.IsOpen)
+            {
+                settingsMenu.IsOpen = false;
+            }
+            else
+            {
+                settingsMenu.PlacementTarget = sender as Button;
+                settingsMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom; // Menu opens downward
+                settingsMenu.IsOpen = true;
+            }
+        }
+
+        private void GeneralSettings_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("General Settings Selected");
+        }
+
+        private void AppearanceSettings_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Appearance Settings Selected");
+        }
+
+        private void AdvancedSettings_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Advanced Settings Selected");
+        }
+    
+
+
+
+
+
+
+
+
+
+
         private void lisää_Click(object sender, RoutedEventArgs e)
         {
             if(textbox.Text != null && !string.IsNullOrWhiteSpace(textbox.Text))

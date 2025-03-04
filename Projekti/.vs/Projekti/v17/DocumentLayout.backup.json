@@ -11,6 +11,10 @@
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\mauri\\documents\\todolist - projekti\\projekti\\projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\mauri\\documents\\todolist - projekti\\projekti\\projekti\\tallentaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\tallentaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -21,10 +25,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\mauri\\documents\\todolist - projekti\\projekti\\projekti\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\app.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\mauri\\documents\\todolist - projekti\\projekti\\projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\mauri\\documents\\todolist - projekti\\projekti\\projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,18 +42,19 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "App.xaml",
               "DocumentMoniker": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\App.xaml",
               "RelativeDocumentMoniker": "Projekti\\App.xaml",
               "ToolTip": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\App.xaml",
               "RelativeToolTip": "Projekti\\App.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-02-16T14:04:23.472Z"
+              "WhenOpened": "2025-02-16T14:04:23.472Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "App.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\App.xaml.cs",
               "RelativeDocumentMoniker": "Projekti\\App.xaml.cs",
@@ -61,7 +62,8 @@
               "RelativeToolTip": "Projekti\\App.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T14:04:33.291Z"
+              "WhenOpened": "2025-02-16T14:04:33.291Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -72,11 +74,12 @@
               "ToolTip": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\Window1.xaml",
               "RelativeToolTip": "Projekti\\Window1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-03T13:55:07.771Z"
+              "WhenOpened": "2025-03-03T13:55:07.771Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 2,
               "Title": "Window1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\Window1.xaml.cs",
               "RelativeDocumentMoniker": "Projekti\\Window1.xaml.cs",
@@ -84,7 +87,8 @@
               "RelativeToolTip": "Projekti\\Window1.xaml.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-03T14:05:33.611Z"
+              "WhenOpened": "2025-03-03T14:05:33.611Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -106,13 +110,14 @@
               "RelativeDocumentMoniker": "Projekti\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\MainWindow.xaml.cs",
               "RelativeToolTip": "Projekti\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAkwFsAAABRAAAAAAAAAA==",
+              "ViewState": "AgIAAHwAAAAAAAAAAAAowBgAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-16T13:33:30.309Z"
+              "WhenOpened": "2025-02-16T13:33:30.309Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Tallentaja.cs",
               "DocumentMoniker": "C:\\Users\\Mauri\\Documents\\ToDoList - Projekti\\Projekti\\Projekti\\Tallentaja.cs",
               "RelativeDocumentMoniker": "Projekti\\Tallentaja.cs",
@@ -120,7 +125,8 @@
               "RelativeToolTip": "Projekti\\Tallentaja.cs",
               "ViewState": "AgIAAA4AAAAAAAAAAAAxwC0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-27T18:12:37.825Z"
+              "WhenOpened": "2025-02-27T18:12:37.825Z",
+              "EditorCaption": ""
             }
           ]
         }

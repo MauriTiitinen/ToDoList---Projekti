@@ -6,30 +6,20 @@
         xmlns:local="clr-namespace:Projekti"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
-    <Grid>
+    <Grid Background="#FFE4DBBC">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="219*"/>
             <ColumnDefinition Width="181*"/>
         </Grid.ColumnDefinitions>
         <Label x:Name="Kello" HorizontalAlignment="Left" Margin="270,357,0,0" VerticalAlignment="Top" Width="104" Height="33" Grid.Column="1"/>
         <Label x:Name="Paiva" FontSize="14" HorizontalAlignment="Left" Margin="237,401,0,10" Width="115" Grid.Column="1"/>
-        <Button Content="Asetukset" Margin="247,13,35,375" RenderTransformOrigin="2.683,-0.951" Grid.Column="1" Click="Button_Click_1">
-            <Button.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform Angle="-0.066"/>
-                    <TranslateTransform X="-0.077" Y="-0.162"/>
-                </TransformGroup>
-            </Button.RenderTransform>
-        </Button>
         <Label Content="Kirjoita tehtävä alla olevaan lootaan" HorizontalAlignment="Left" Height="34" Margin="70,354,0,0" VerticalAlignment="Top" Width="209" RenderTransformOrigin="0.495,1.187"/>
-        <Label Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="61,20,0,0" VerticalAlignment="Top" Width="218" FontSize="24"/>
+        <Label Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="117,17,0,0" VerticalAlignment="Top" Width="142" FontSize="24" Background="#FFBBB7B7" AutomationProperties.IsOffscreenBehavior="Onscreen" FontWeight="Bold"/>
         <Label Content="Kesken olevat tehtävät" HorizontalAlignment="Left" Height="24" Margin="133,72,0,0" VerticalAlignment="Top" Width="261"/>
         <Label Content="Valmiit tehtävät" HorizontalAlignment="Left" Height="29" Margin="148,213,0,0" VerticalAlignment="Top" Width="174"/>
-        <Button x:Name="poista" Content="Poista" HorizontalAlignment="Left" Height="66" Margin="308,402,0,0" VerticalAlignment="Top" Width="73" Click="poista_Click"/>
-        <Button x:Name="lisää" Content="Lisää" HorizontalAlignment="Left" Height="65" Margin="10,388,0,0" VerticalAlignment="Top" Width="63" Click="lisää_Click"/>
-        <ListBox Name="kesken" Margin="20,100,20,268" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="poista" Content="Poista" HorizontalAlignment="Left" Height="66" Margin="308,402,0,0" VerticalAlignment="Top" Width="73" Click="poista_Click" Background="{x:Null}"/>
+        <Button x:Name="lisää" Content="Lisää" HorizontalAlignment="Left" Height="65" Margin="10,388,0,0" VerticalAlignment="Top" Width="63" Click="lisää_Click" Background="{x:Null}"/>
+        <ListBox Name="kesken" Margin="20,100,20,268" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
             <ListBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -44,16 +34,28 @@
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Name="valmiit" Margin="18,238,22,130">
+        <ListBox Name="valmiit" Margin="18,238,22,130" Background="{x:Null}">
             <ListBox.ItemTemplate>
                 <DataTemplate>
                     <CheckBox Content="{Binding}" IsChecked="True" Unchecked="CheckBox_Unchecked"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <TextBox x:Name="textbox" HorizontalAlignment="Left" Height="87" Margin="82,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176"/>
+        <TextBox x:Name="textbox" HorizontalAlignment="Left" Height="87" Margin="82,381,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="176" Background="{x:Null}"/>
         <Label Content="Valitse tehtävä klikkaamalla&#xD;&#xA; ja paina poista nappia" HorizontalAlignment="Left" Height="47" Margin="272,359,0,0" VerticalAlignment="Top" Width="176" Grid.ColumnSpan="2"/>
-        <Button Grid.Column="1" Content="uusi ikkuna" HorizontalAlignment="Left" Height="74" Margin="26,238,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click"/>
+        <Button Grid.Column="1" Content="uusi ikkuna" HorizontalAlignment="Left" Height="74" Margin="26,238,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click" Background="{x:Null}"/>
+
+        <Button x:Name="SettingsButton" Content="☰"
+                Width="99" Height="90"
+                HorizontalAlignment="Right" VerticalAlignment="Top"
+                Margin="0,9,10,0" Click="SettingsButton_Click"
+                Background="{x:Null}" Foreground="Black"
+                FontSize="24" Grid.Column="1" BorderBrush="{x:Null}"/>
+
+
+
+
+
 
     </Grid>
 </Window>
