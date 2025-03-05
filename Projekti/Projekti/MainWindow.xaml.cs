@@ -67,17 +67,21 @@ namespace Projekti
 
         private void GeneralSettings_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("General Settings Selected");
+            
+            GeneralSettings generalSetting = new GeneralSettings();
+            generalSetting.Show();
         }
 
         private void AppearanceSettings_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Appearance Settings Selected");
+            AppearanceSettings appearancesetting = new AppearanceSettings();
+            appearancesetting.Show();
         }
 
         private void AdvancedSettings_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Advanced Settings Selected");
+           AdvancedSettings advancedSetting = new AdvancedSettings();
+            advancedSetting.Show();
         }
     
 
