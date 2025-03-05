@@ -18,8 +18,8 @@ namespace Projekti
     /// </summary>
     public partial class MainWindow : Window
     {
-        private ObservableCollection<string> vlista = new ObservableCollection<string>();
-        private ObservableCollection<string> klista = new ObservableCollection<string>();
+        public ObservableCollection<string> vlista = new ObservableCollection<string>();
+        public ObservableCollection<string> klista = new ObservableCollection<string>();
 
 
         private ContextMenu settingsMenu;
@@ -84,22 +84,11 @@ namespace Projekti
             advancedSetting.Show();
         }
     
-
-
-
-
-
-
-
-
-
-
-        private void lisää_Click(object sender, RoutedEventArgs e)
+        public void lisäätehtävä(string tehtävät)
         {
-            if(textbox.Text != null && !string.IsNullOrWhiteSpace(textbox.Text))
+            if (!string.IsNullOrWhiteSpace(tehtävät))
             {
-                klista.Add(textbox.Text);
-                textbox.Clear();
+                klista.Add(tehtävät);
                 KTallentaja.Tallenna(klista);
             }
         }

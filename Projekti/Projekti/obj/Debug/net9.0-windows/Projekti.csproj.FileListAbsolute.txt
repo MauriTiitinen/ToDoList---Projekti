@@ -71,3 +71,9 @@ C:\Users\mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-
 C:\Users\mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\AppearanceSettings.baml
 C:\Users\mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\AdvancedSettings.g.cs
 C:\Users\mauri\Documents\ToDoList - Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\AdvancedSettings.baml
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\AdvancedSettings.g.cs
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\AppearanceSettings.g.cs
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\GeneralSettings.g.cs
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\AdvancedSettings.baml
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\AppearanceSettings.baml
+C:\Users\aapok\Desktop\todolist\ToDoList---Projekti\Projekti\Projekti\obj\Debug\net9.0-windows\GeneralSettings.baml
