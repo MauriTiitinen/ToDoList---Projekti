@@ -80,17 +80,15 @@ namespace Projekti
 
         private void AdvancedSettings_Click(object sender, RoutedEventArgs e)
         {
-           AdvancedSettings advancedSetting = new AdvancedSettings();
+            AdvancedSettings advancedSetting = new AdvancedSettings();
             advancedSetting.Show();
         }
     
         public void lisäätehtävä(string tehtävät)
         {
-            if (!string.IsNullOrWhiteSpace(tehtävät))
-            {
-                klista.Add(tehtävät);
-                KTallentaja.Tallenna(klista);
-            }
+            klista.Add(tehtävät);
+            KTallentaja.Tallenna(klista);
+            
         }
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
@@ -114,13 +112,13 @@ namespace Projekti
         }
         private void poista_Click(object sender, RoutedEventArgs e)
         {
-            if(valmiit.SelectedItem != null)
+            if (valmiit.SelectedItem != null)
             {
                 vlista.Remove(valmiit.SelectedItem.ToString());
                 VTallentaja.Tallenna(vlista);
             }
-                
-            else if(kesken.SelectedItem != null)
+
+            else if (kesken.SelectedItem != null)
             {
                 klista.Remove(kesken.SelectedItem.ToString());
                 KTallentaja.Tallenna(klista);

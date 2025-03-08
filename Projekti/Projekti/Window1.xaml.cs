@@ -13,6 +13,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Microsoft.Toolkit.Uwp.Notifications;
 
 namespace Projekti
 {
@@ -21,21 +22,31 @@ namespace Projekti
     /// </summary>
     public partial class Window1 : Window
     {
+        public string tunnit { get; set; }
+        public string minuutit { get; set; }
         public Window1()
         {
             InitializeComponent();
-            Tunnit.SelectedIndex = 0;
-            Minuutit.SelectedIndex = 0;
         }
-        private void aika_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+        private void aika_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            string tunnit = (Tunnit.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content.ToString();
-            string minuutit = (Minuutit.SelectedItem as System.Windows.Controls.ComboBoxItem)?.Content.ToString();
+            tunnit = (Tunnit.SelectedItem as ComboBoxItem)?.Content.ToString();
+            minuutit = (Minuutit.SelectedItem as ComboBoxItem)?.Content.ToString();
         }
         private void lisää1_Click(object sender, RoutedEventArgs e)
         {
+            string päivä = Päivämäärä.SelectedDate?.ToString("dd-MM-yyyy");
+            string aika = $"{tunnit}:{minuutit}";
             MainWindow main = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            main.lisäätehtävä(textbox1.Text);
+            if (string.IsNullOrWhiteSpace(tunnit) && string.IsNullOrWhiteSpace(minuutit) && päivä == null)
+                main.lisäätehtävä(textbox1.Text);
+            else if (string.IsNullOrWhiteSpace(textbox1.Text) || string.IsNullOrWhiteSpace(tunnit) || string.IsNullOrWhiteSpace(minuutit) || päivä == null)
+            {
+                MessageBox.Show("Kirjoita tehtävä ja valitse päivämäärä ja aika tai jätä päivämäärä ja aika tyhjäksi");
+                return;
+            }
+            else
+                main.lisäätehtävä(textbox1.Text + "   " + "Muistutus:  " + päivä + " " + aika);
             textbox1.Clear();
         }
     }

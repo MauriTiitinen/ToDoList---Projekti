@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj": {}
+    "C:\\Users\\aapok\\Desktop\\Koulutehtäviä\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj": {
+    "C:\\Users\\aapok\\Desktop\\Koulutehtäviä\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
+        "projectUniqueName": "C:\\Users\\aapok\\Desktop\\Koulutehtäviä\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
         "projectName": "Projekti",
-        "projectPath": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
+        "projectPath": "C:\\Users\\aapok\\Desktop\\Koulutehtäviä\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
         "packagesPath": "C:\\Users\\aapok\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aapok\\Desktop\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\obj\\",
+        "outputPath": "C:\\Users\\aapok\\Desktop\\Koulutehtäviä\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -49,6 +49,12 @@
       "frameworks": {
         "net9.0-windows7.0": {
           "targetAlias": "net9.0-windows",
+          "dependencies": {
+            "Microsoft.Toolkit.Uwp.Notifications": {
+              "target": "Package",
+              "version": "[7.1.3, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
