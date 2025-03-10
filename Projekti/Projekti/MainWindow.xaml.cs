@@ -10,6 +10,12 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using Windows.UI.Notifications;
+using Windows.Data.Xml.Dom;
+
+
+
+
 
 namespace Projekti
 {
@@ -20,8 +26,7 @@ namespace Projekti
     {
         public ObservableCollection<string> vlista = new ObservableCollection<string>();
         public ObservableCollection<string> klista = new ObservableCollection<string>();
-
-
+        
         private ContextMenu settingsMenu;
         public MainWindow()
         {
@@ -48,8 +53,11 @@ namespace Projekti
             settingsMenu.Items.Add(generalItem);
             settingsMenu.Items.Add(appearanceItem);
             settingsMenu.Items.Add(advancedItem);
-        }
 
+            
+
+        }
+        
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             // Toggle the menu
@@ -160,6 +168,28 @@ namespace Projekti
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
 
+        }
+        public void ShowToastNotification()
+        {
+            string toastXmlString = @"
+            <toast>
+                <visual>
+                    <binding template='ToastGeneric'>
+                        <text>Title of Notification</text>
+                        <text>This is a test notification from .NET 9 app</text>
+                    </binding>
+                </visual>
+            </toast>";
+
+            XmlDocument toastXml = new XmlDocument();
+            toastXml.LoadXml(toastXmlString);
+
+            ToastNotification toast = new ToastNotification(toastXml);
+            ToastNotificationManager.CreateToastNotifier().Show(toast);
+        }
+        private void ilmoitus_Click(object sender, RoutedEventArgs e)
+        {
+            ShowToastNotification();
         }
     }
 }

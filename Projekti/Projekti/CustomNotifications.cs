@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Projekti
 {
-    class timepicker
+    class CustomNotifications
     {
     }
 }
