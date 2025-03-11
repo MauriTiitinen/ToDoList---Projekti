@@ -37,12 +37,12 @@ namespace Projekti
         {
             string päivä = Päivämäärä.SelectedDate?.ToString("dd-MM-yyyy");
             string aika = $"{tunnit}:{minuutit}";
-            MainWindow main = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+            MainWindow main = System.Windows.Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
             if (string.IsNullOrWhiteSpace(tunnit) && string.IsNullOrWhiteSpace(minuutit) && päivä == null)
                 main.lisäätehtävä(textbox1.Text);
             else if (string.IsNullOrWhiteSpace(textbox1.Text) || string.IsNullOrWhiteSpace(tunnit) || string.IsNullOrWhiteSpace(minuutit) || päivä == null)
             {
-                MessageBox.Show("Kirjoita tehtävä ja valitse päivämäärä ja aika tai jätä päivämäärä ja aika tyhjäksi");
+                System.Windows.MessageBox.Show("Laita kaikkiin kenttii jotain tai jätä päivämäärä ja aika tyhjäksi");
                 return;
             }
             else

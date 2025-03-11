@@ -1,4 +1,5 @@
-﻿using System.Collections.ObjectModel;
+﻿using System;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -10,8 +11,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using Windows.UI.Notifications;
-using Windows.Data.Xml.Dom;
+using System.Windows.Forms; 
+using System.Drawing;
 
 
 
@@ -26,7 +27,9 @@ namespace Projekti
     {
         public ObservableCollection<string> vlista = new ObservableCollection<string>();
         public ObservableCollection<string> klista = new ObservableCollection<string>();
-        
+
+        private NotifyIcon notifyIcon;
+
         private ContextMenu settingsMenu;
         public MainWindow()
         {
@@ -54,7 +57,7 @@ namespace Projekti
             settingsMenu.Items.Add(appearanceItem);
             settingsMenu.Items.Add(advancedItem);
 
-            
+            ShowNotification();
 
         }
         
@@ -67,7 +70,7 @@ namespace Projekti
             }
             else
             {
-                settingsMenu.PlacementTarget = sender as Button;
+                settingsMenu.PlacementTarget = sender as System.Windows.Controls.Button;
                 settingsMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom; // Menu opens downward
                 settingsMenu.IsOpen = true;
             }
@@ -100,7 +103,7 @@ namespace Projekti
         }
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox checkBox && checkBox.DataContext is string tehtävä)
+            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.DataContext is string tehtävä)
             {
                 vlista.Add(tehtävä);
                 klista.Remove(tehtävä);
@@ -110,7 +113,7 @@ namespace Projekti
         }
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            if (sender is CheckBox checkBox && checkBox.DataContext is string tehtävä)
+            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.DataContext is string tehtävä)
             {
                 klista.Add(tehtävä);
                 vlista.Remove(tehtävä);
@@ -169,27 +172,26 @@ namespace Projekti
         {
 
         }
-        public void ShowToastNotification()
+
+
+        private void ShowNotification()
         {
-            string toastXmlString = @"
-            <toast>
-                <visual>
-                    <binding template='ToastGeneric'>
-                        <text>Title of Notification</text>
-                        <text>This is a test notification from .NET 9 app</text>
-                    </binding>
-                </visual>
-            </toast>";
+            notifyIcon = new NotifyIcon
+            {
+                Icon = SystemIcons.Information,
+                Visible = true,
+                BalloonTipTitle = "WPF Notification",
+                BalloonTipText = "This is a test notification in .NET 9 WPF",
+                BalloonTipIcon = ToolTipIcon.Info
+            };
 
-            XmlDocument toastXml = new XmlDocument();
-            toastXml.LoadXml(toastXmlString);
-
-            ToastNotification toast = new ToastNotification(toastXml);
-            ToastNotificationManager.CreateToastNotifier().Show(toast);
+            notifyIcon.ShowBalloonTip(5000);
         }
+        
+
         private void ilmoitus_Click(object sender, RoutedEventArgs e)
         {
-            ShowToastNotification();
+            
         }
     }
 }

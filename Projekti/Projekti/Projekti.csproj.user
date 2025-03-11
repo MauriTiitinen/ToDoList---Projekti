@@ -13,9 +13,6 @@
     <Compile Update="AppearanceSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
-    <Compile Update="CustomDisplayPart.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="GeneralSettings.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
