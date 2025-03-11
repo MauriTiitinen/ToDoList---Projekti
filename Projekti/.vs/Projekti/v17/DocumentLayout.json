@@ -7,20 +7,20 @@
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\projekti.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
-      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\projekti.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\projekti.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}",
+      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\projekti.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}"
     }
   ],
   "DocumentGroupContainers": [
@@ -34,49 +34,53 @@
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 4,
               "Title": "Projekti.csproj",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
               "RelativeDocumentMoniker": "Projekti\\Projekti.csproj",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Projekti.csproj",
               "RelativeToolTip": "Projekti\\Projekti.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-10T14:42:52.79Z"
+              "WhenOpened": "2025-03-10T14:42:52.79Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "Window1.xaml",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml",
               "RelativeDocumentMoniker": "Projekti\\Window1.xaml",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml",
               "RelativeToolTip": "Projekti\\Window1.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-10T14:49:31.57Z"
+              "WhenOpened": "2025-03-10T14:49:31.57Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "Window1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml.cs",
               "RelativeDocumentMoniker": "Projekti\\Window1.xaml.cs",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml.cs",
               "RelativeToolTip": "Projekti\\Window1.xaml.cs",
-              "ViewState": "AgIAABsAAAAAAAAAAAAowDIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAqwDIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-10T14:42:52.879Z"
+              "WhenOpened": "2025-03-10T14:42:52.879Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 1,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Projekti\\MainWindow.xaml",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml",
               "RelativeToolTip": "Projekti\\MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-03-10T14:49:40.261Z"
+              "WhenOpened": "2025-03-10T14:49:40.261Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
@@ -86,7 +90,7 @@
               "RelativeDocumentMoniker": "Projekti\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml.cs",
               "RelativeToolTip": "Projekti\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAJgAAAAAAAAAAAAEwMQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAAJYAAAAAAAAAAAAswMQAAAABAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T14:42:51.123Z",
               "EditorCaption": ""

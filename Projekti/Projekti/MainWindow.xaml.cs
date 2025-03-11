@@ -12,7 +12,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Windows.Forms; 
-using System.Drawing;
+
 
 
 
@@ -57,7 +57,7 @@ namespace Projekti
             settingsMenu.Items.Add(appearanceItem);
             settingsMenu.Items.Add(advancedItem);
 
-            ShowNotification();
+            
 
         }
         
@@ -180,8 +180,8 @@ namespace Projekti
             {
                 Icon = SystemIcons.Information,
                 Visible = true,
-                BalloonTipTitle = "WPF Notification",
-                BalloonTipText = "This is a test notification in .NET 9 WPF",
+                BalloonTipTitle = "To-Do list",
+                BalloonTipText = "Nonnii teeppä niitä tehtäviä",
                 BalloonTipIcon = ToolTipIcon.Info
             };
 
@@ -191,7 +191,7 @@ namespace Projekti
 
         private void ilmoitus_Click(object sender, RoutedEventArgs e)
         {
-            
+            ShowNotification();
         }
     }
 }
