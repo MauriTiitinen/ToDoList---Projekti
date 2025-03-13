@@ -13,11 +13,11 @@
         </Grid.ColumnDefinitions>
         <Label x:Name="Kello" HorizontalAlignment="Left" Margin="270,357,0,0" VerticalAlignment="Top" Width="104" Height="33" Grid.Column="1"/>
         <Label x:Name="Paiva" FontSize="14" HorizontalAlignment="Left" Margin="237,401,0,10" Width="115" Grid.Column="1"/>
-        <Label Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="133,23,0,0" VerticalAlignment="Top" Width="142" FontSize="24" Background="#FFBBB7B7" AutomationProperties.IsOffscreenBehavior="Onscreen" FontWeight="Bold"/>
-        <Label Content="Kesken olevat tehtävät" HorizontalAlignment="Left" Height="24" Margin="139,75,0,0" VerticalAlignment="Top" Width="261"/>
-        <Label Content="Valmiit tehtävät" HorizontalAlignment="Left" Height="29" Margin="160,0,0,0" VerticalAlignment="Center" Width="174"/>
-        <Button x:Name="poista" Content="Poista" HorizontalAlignment="Left" Height="60" Margin="133,408,0,0" VerticalAlignment="Top" Width="73" Click="poista_Click"/>
-        <ListBox Name="kesken" Margin="20,100,20,257" RenderTransformOrigin="0.5,0.5">
+        <Label Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="329,10,0,0" VerticalAlignment="Top" Width="142" FontSize="24" Background="#FFBBB7B7" AutomationProperties.IsOffscreenBehavior="Onscreen" FontWeight="Bold" Grid.ColumnSpan="2"/>
+        <Label Content="Kesken olevat tehtävät" HorizontalAlignment="Left" Height="33" Margin="197,66,0,0" VerticalAlignment="Top" Width="261" Grid.ColumnSpan="2" FontSize="14"/>
+        <Label Content="Valmiit tehtävät" HorizontalAlignment="Left" Height="29" Margin="219,0,0,0" VerticalAlignment="Center" Width="174" FontSize="14"/>
+        <Button x:Name="poista" Content="Poista" HorizontalAlignment="Left" Height="60" Margin="246,408,0,0" VerticalAlignment="Top" Width="73" Click="poista_Click" FontSize="14"/>
+        <ListBox Name="kesken" Margin="20,100,256,257" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
             <ListBox.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -28,19 +28,18 @@
             </ListBox.RenderTransform>
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <CheckBox Content="{Binding}" IsChecked="False" Checked="CheckBox_Checked"/>
+                    <CheckBox Content="{Binding}" IsChecked="False" Checked="CheckBox_Checked" FontSize="14"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Name="valmiit" Margin="20,255,20,94">
+        <ListBox Name="valmiit" Margin="20,255,255,94" Grid.ColumnSpan="2">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <CheckBox Content="{Binding}" IsChecked="True" Unchecked="CheckBox_Unchecked"/>
+                    <CheckBox Content="{Binding}" IsChecked="True" Unchecked="CheckBox_Unchecked" FontSize="14"/>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Label Content="Valitse tehtävä klikkaamalla&#xD;&#xA; ja paina poista nappia" HorizontalAlignment="Left" Height="47" Margin="217,421,0,0" VerticalAlignment="Top" Width="176"/>
-        <Button Content="lisää uusi &#xD;&#xA;tehtävä&#xD;&#xA;" HorizontalAlignment="Left" Height="60" Margin="26,408,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click"/>
+        <Button Content="lisää uusi &#xD;&#xA;tehtävä&#xD;&#xA;" HorizontalAlignment="Left" Height="60" Margin="127,408,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click" FontSize="14"/>
 
         <Button x:Name="SettingsButton" Content="☰"
                 Width="99" Height="90"
@@ -48,7 +47,6 @@
                 Margin="0,9,10,0" Click="SettingsButton_Click"
                 Foreground="Black"
                 FontSize="24" Grid.Column="1"/>
-        <Button x:Name="ilmoitus" Grid.Column="1" Content="ilmoitus&#xD;&#xA;" HorizontalAlignment="Left" Height="68" Margin="72,289,0,0" VerticalAlignment="Top" Width="78" Click="ilmoitus_Click"/>
 
 
 

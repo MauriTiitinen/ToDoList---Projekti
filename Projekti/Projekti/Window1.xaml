@@ -9,7 +9,7 @@
 
     <Grid>
         <Label Margin="40,26,260,330" Content="Tehtävä:"/>
-        <TextBox x:Name="textbox1" Margin="40,59,40,263" />
+        <TextBox x:Name="textbox1" Margin="40,59,40,263" FontSize="14" />
         <Label Margin="40,121,283,234" Content="Muistutus:"/>
         <DatePicker x:Name="Päivämäärä" Margin="40,150,40,185"/>
         <Button Margin="116,272,116,48" Click="lisää1_Click" Content="Lisää tehtävä"/>

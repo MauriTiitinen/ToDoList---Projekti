@@ -11,7 +11,9 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
-using System.Windows.Forms; 
+using System.Windows.Forms;
+using System.Text.Json;
+using System.IO;
 
 
 
@@ -25,9 +27,9 @@ namespace Projekti
     /// </summary>
     public partial class MainWindow : Window
     {
-        public ObservableCollection<string> vlista = new ObservableCollection<string>();
-        public ObservableCollection<string> klista = new ObservableCollection<string>();
-
+        public ObservableCollection<Tehtävä> vlista = new ObservableCollection<Tehtävä>();
+        public ObservableCollection<Tehtävä> klista = new ObservableCollection<Tehtävä>();
+        private DispatcherTimer countdownTimer;
         private NotifyIcon notifyIcon;
 
         private ContextMenu settingsMenu;
@@ -57,10 +59,25 @@ namespace Projekti
             settingsMenu.Items.Add(appearanceItem);
             settingsMenu.Items.Add(advancedItem);
 
-            
+            countdownTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
+            countdownTimer.Tick += CountdownCheck;
+            countdownTimer.Start();
 
+           
         }
-        
+        private void notifikaatio()
+        {
+            notifyIcon = new NotifyIcon
+            {
+                Icon = SystemIcons.Information,
+                Visible = true,
+                BalloonTipTitle = "To-Do list",
+                BalloonTipText = "Nonnii teeppä niitä tehtäviä",
+                BalloonTipIcon = ToolTipIcon.Info
+            };
+
+            notifyIcon.ShowBalloonTip(5000);
+        }
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
             // Toggle the menu
@@ -94,16 +111,48 @@ namespace Projekti
             AdvancedSettings advancedSetting = new AdvancedSettings();
             advancedSetting.Show();
         }
-    
-        public void lisäätehtävä(string tehtävät)
+        
+        public void lisäätehtävä(string nimi, DateTime? remindertime)
         {
-            klista.Add(tehtävät);
+            Tehtävä tehtävä = new Tehtävä(nimi, remindertime);
+            klista.Add(tehtävä);
             KTallentaja.Tallenna(klista);
             
         }
+        public class Tehtävä
+        {
+            public string TaskName { get; set; }
+            public DateTime? ReminderTime { get; set; }
+            public bool Done { get; set; }
+            public Tehtävä(string taskName, DateTime? reminderTime)
+            {
+                TaskName = taskName;
+                ReminderTime = reminderTime;
+                Done = false;
+            }
+            public override string ToString()
+            {
+                return TaskName;
+            }
+        }
+        private void CountdownCheck(object sender, EventArgs e)
+        {
+            for (int i = klista.Count - 1; i >= 0; i--)
+            {
+                if (klista[i].ReminderTime.HasValue)
+                {
+                    TimeSpan remaining = klista[i].ReminderTime.Value - DateTime.Now;
+                    if (remaining.TotalSeconds <= 0 && !klista[i].Done)
+                    {
+                        notifikaatio();
+                        klista[i].Done = true;
+                    }
+                }
+            }
+        }
         private void CheckBox_Checked(object sender, RoutedEventArgs e)
         {
-            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.DataContext is string tehtävä)
+            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.DataContext is Tehtävä tehtävä)
             {
                 vlista.Add(tehtävä);
                 klista.Remove(tehtävä);
@@ -113,7 +162,7 @@ namespace Projekti
         }
         private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
         {
-            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.DataContext is string tehtävä)
+            if (sender is System.Windows.Controls.CheckBox checkBox && checkBox.DataContext is Tehtävä tehtävä)
             {
                 klista.Add(tehtävä);
                 vlista.Remove(tehtävä);
@@ -125,13 +174,13 @@ namespace Projekti
         {
             if (valmiit.SelectedItem != null)
             {
-                vlista.Remove(valmiit.SelectedItem.ToString());
+                vlista.Remove((Tehtävä)valmiit.SelectedItem);
                 VTallentaja.Tallenna(vlista);
             }
 
             else if (kesken.SelectedItem != null)
             {
-                klista.Remove(kesken.SelectedItem.ToString());
+                klista.Remove((Tehtävä)kesken.SelectedItem);
                 KTallentaja.Tallenna(klista);
             }
         }
@@ -172,26 +221,71 @@ namespace Projekti
         {
 
         }
-
-
-        private void ShowNotification()
+        internal static class VTallentaja
         {
-            notifyIcon = new NotifyIcon
+            private static string tiedostonimi = "valmiit.json";
+            public static bool Tallenna(ObservableCollection<Tehtävä> vlista)
             {
-                Icon = SystemIcons.Information,
-                Visible = true,
-                BalloonTipTitle = "To-Do list",
-                BalloonTipText = "Nonnii teeppä niitä tehtäviä",
-                BalloonTipIcon = ToolTipIcon.Info
-            };
+                try
+                {
+                    var json_muoto = JsonSerializer.Serialize(vlista);
+                    File.WriteAllText(tiedostonimi, json_muoto);
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            public static ObservableCollection<Tehtävä> LueValmiit()
+            {
+                try
+                {
+                    var json_muoto = File.ReadAllText(tiedostonimi);
+                    var vlista = JsonSerializer.Deserialize<ObservableCollection<Tehtävä>>(json_muoto);
+                    if (vlista == null)
+                        return new ObservableCollection<Tehtävä>();
+                    return vlista;
+                }
+                catch
+                {
+                    return new ObservableCollection<Tehtävä>();
+                }
 
-            notifyIcon.ShowBalloonTip(5000);
+            }
         }
-        
-
-        private void ilmoitus_Click(object sender, RoutedEventArgs e)
+        internal static class KTallentaja
         {
-            ShowNotification();
+            private static string tiedostonimi = "kesken.json";
+            public static bool Tallenna(ObservableCollection<Tehtävä> klista)
+            {
+                try
+                {
+                    var json_muoto1 = JsonSerializer.Serialize(klista);
+                    File.WriteAllText(tiedostonimi, json_muoto1);
+                    return true;
+                }
+                catch
+                {
+                    return false;
+                }
+            }
+            public static ObservableCollection<Tehtävä> LueKesken()
+            {
+                try
+                {
+                    var json_muoto1 = File.ReadAllText(tiedostonimi);
+                    var klista = JsonSerializer.Deserialize<ObservableCollection<Tehtävä>>(json_muoto1);
+                    if (klista == null)
+                        return new ObservableCollection<Tehtävä>();
+                    return klista;
+                }
+                catch
+                {
+                    return new ObservableCollection<Tehtävä>();
+                }
+
+            }
         }
     }
 }

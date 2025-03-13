@@ -7,12 +7,12 @@
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\window1.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|solutionrelative:projekti\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{BC572A8A-85FE-4FD1-8FD6-3C09C519B618}|Projekti\\Projekti.csproj|c:\\users\\aapok\\desktop\\kouluteht\u00E4vi\u00E4\\todolist\\todolist---projekti\\projekti\\projekti\\window1.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -42,8 +42,7 @@
               "RelativeToolTip": "Projekti\\Projekti.csproj",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-03-10T14:42:52.79Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-03-10T14:42:52.79Z"
             },
             {
               "$type": "Document",
@@ -59,20 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Window1.xaml.cs",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml.cs",
               "RelativeDocumentMoniker": "Projekti\\Window1.xaml.cs",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\Window1.xaml.cs",
               "RelativeToolTip": "Projekti\\Window1.xaml.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAqwDIAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAgwEsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T14:42:52.879Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml",
               "RelativeDocumentMoniker": "Projekti\\MainWindow.xaml",
@@ -90,7 +89,7 @@
               "RelativeDocumentMoniker": "Projekti\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\aapok\\Desktop\\Kouluteht\u00E4vi\u00E4\\todolist\\ToDoList---Projekti\\Projekti\\Projekti\\MainWindow.xaml.cs",
               "RelativeToolTip": "Projekti\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAJYAAAAAAAAAAAAswMQAAAABAAAAAAAAAA==",
+              "ViewState": "AgIAANsAAAAAAAAAAAAowJIAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-10T14:42:51.123Z",
               "EditorCaption": ""
