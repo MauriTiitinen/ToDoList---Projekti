@@ -7,39 +7,47 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800">
     <Grid Background="#FFE4DBBC">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="219*"/>
-            <ColumnDefinition Width="181*"/>
-        </Grid.ColumnDefinitions>
         <Label x:Name="Kello" HorizontalAlignment="Left" Margin="270,357,0,0" VerticalAlignment="Top" Width="104" Height="33" Grid.Column="1"/>
         <Label x:Name="Paiva" FontSize="14" HorizontalAlignment="Left" Margin="237,401,0,10" Width="115" Grid.Column="1"/>
-        <Label Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="329,10,0,0" VerticalAlignment="Top" Width="142" FontSize="24" Background="#FFBBB7B7" AutomationProperties.IsOffscreenBehavior="Onscreen" FontWeight="Bold" Grid.ColumnSpan="2"/>
-        <Label Content="Kesken olevat tehtävät" HorizontalAlignment="Left" Height="33" Margin="197,66,0,0" VerticalAlignment="Top" Width="261" Grid.ColumnSpan="2" FontSize="14"/>
-        <Label Content="Valmiit tehtävät" HorizontalAlignment="Left" Height="29" Margin="219,0,0,0" VerticalAlignment="Center" Width="174" FontSize="14"/>
-        <Button x:Name="poista" Content="Poista" HorizontalAlignment="Left" Height="60" Margin="246,408,0,0" VerticalAlignment="Top" Width="73" Click="poista_Click" FontSize="14"/>
-        <ListBox Name="kesken" Margin="20,100,256,257" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
-            <ListBox.RenderTransform>
+        <Label Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="237,7,0,0" VerticalAlignment="Top" Width="142" FontSize="24" Background="#FFBBB7B7" AutomationProperties.IsOffscreenBehavior="Onscreen" FontWeight="Bold"/>
+        <Label Content="Kesken olevat tehtävät" HorizontalAlignment="Left" Height="33" Margin="237,66,0,0" VerticalAlignment="Top" Width="156" FontSize="14"/>
+        <Label Content="Valmiit tehtävät" HorizontalAlignment="Left" Height="29" Margin="255,264,0,0" VerticalAlignment="Top" Width="106" FontSize="14" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
                     <SkewTransform/>
-                    <RotateTransform Angle="0.285"/>
+                    <RotateTransform Angle="0.246"/>
                     <TranslateTransform/>
                 </TransformGroup>
-            </ListBox.RenderTransform>
+            </Label.RenderTransform>
+        </Label>
+        <ListBox Name="kesken" Margin="20,100,190,214" RenderTransformOrigin="0.5,0.5">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <CheckBox Content="{Binding}" IsChecked="False" Checked="CheckBox_Checked" FontSize="14"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="False" Checked="CheckBox_Checked"/>
+                        <Button Content="Editoi" Click="edit_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
+                        <Button Content="Poista" Click="poista_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
+                        <TextBlock Text="{Binding TaskName}" Margin="10, 0, 0, 0" FontSize="14"/>
+                        <TextBlock Text="{Binding ReminderTime, StringFormat='dd.MM.yyyy HH:mm'}" Margin="10, 0, 0, 0" FontSize="14"/>
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <ListBox Name="valmiit" Margin="20,255,255,94" Grid.ColumnSpan="2">
+        <ListBox Name="valmiit" Margin="19,294,190,21">
             <ListBox.ItemTemplate>
                 <DataTemplate>
-                    <CheckBox Content="{Binding}" IsChecked="True" Unchecked="CheckBox_Unchecked" FontSize="14"/>
+                    <StackPanel Orientation="Horizontal">
+                        <CheckBox IsChecked="True" Unchecked="CheckBox_Unchecked"/>
+                        <Button Content="Editoi" Click="edit_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
+                        <Button Content="Poista" Click="poista_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
+                        <TextBlock Text="{Binding TaskName}" Margin="10, 0, 0, 0" FontSize="14"/>
+                        <TextBlock Text="{Binding ReminderTime, StringFormat='dd.MM.yyyy HH:mm'}" Margin="10, 0, 0, 0" FontSize="14"/>
+                    </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="lisää uusi &#xD;&#xA;tehtävä&#xD;&#xA;" HorizontalAlignment="Left" Height="60" Margin="127,408,0,0" VerticalAlignment="Top" Width="77" Click="Button_Click" FontSize="14"/>
+        <Button Content="Lisää uusi &#xA;tehtävä&#xA;" HorizontalAlignment="Left" Height="60" Margin="637,152,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click" FontSize="14" RenderTransformOrigin="0.508,0.443"/>
 
         <Button x:Name="SettingsButton" Content="☰"
                 Width="99" Height="90"

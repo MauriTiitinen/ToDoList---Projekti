@@ -12,8 +12,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
 using System.Windows.Forms;
-using System.Text.Json;
-using System.IO;
+
+
 
 
 
@@ -172,21 +172,14 @@ namespace Projekti
         }
         private void poista_Click(object sender, RoutedEventArgs e)
         {
-            if (valmiit.SelectedItem != null)
+            if (sender is System.Windows.Controls.Button button && button.Tag is Tehtävä tehtävä)
             {
-                vlista.Remove((Tehtävä)valmiit.SelectedItem);
+                klista.Remove(tehtävä);
+                vlista.Remove(tehtävä);
+                KTallentaja.Tallenna(klista);
                 VTallentaja.Tallenna(vlista);
             }
-
-            else if (kesken.SelectedItem != null)
-            {
-                klista.Remove((Tehtävä)kesken.SelectedItem);
-                KTallentaja.Tallenna(klista);
-            }
         }
-        
-        
-
         private DispatcherTimer timer = new DispatcherTimer();
 
         private void StartClock()
@@ -200,91 +193,21 @@ namespace Projekti
             };
             timer.Start();
         }
-
-        private void textbox_TextChanged_2(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void CheckBox_Checked_1(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Window1 win1 = new Window1();
             win1.Show();
         }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void edit_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-        internal static class VTallentaja
-        {
-            private static string tiedostonimi = "valmiit.json";
-            public static bool Tallenna(ObservableCollection<Tehtävä> vlista)
+            if (sender is System.Windows.Controls.Button button && button.Tag is Tehtävä tehtävä)
             {
-                try
-                {
-                    var json_muoto = JsonSerializer.Serialize(vlista);
-                    File.WriteAllText(tiedostonimi, json_muoto);
-                    return true;
-                }
-                catch
-                {
-                    return false;
-                }
-            }
-            public static ObservableCollection<Tehtävä> LueValmiit()
-            {
-                try
-                {
-                    var json_muoto = File.ReadAllText(tiedostonimi);
-                    var vlista = JsonSerializer.Deserialize<ObservableCollection<Tehtävä>>(json_muoto);
-                    if (vlista == null)
-                        return new ObservableCollection<Tehtävä>();
-                    return vlista;
-                }
-                catch
-                {
-                    return new ObservableCollection<Tehtävä>();
-                }
-
-            }
-        }
-        internal static class KTallentaja
-        {
-            private static string tiedostonimi = "kesken.json";
-            public static bool Tallenna(ObservableCollection<Tehtävä> klista)
-            {
-                try
-                {
-                    var json_muoto1 = JsonSerializer.Serialize(klista);
-                    File.WriteAllText(tiedostonimi, json_muoto1);
-                    return true;
-                }
-                catch
-                {
-                    return false;
-                }
-            }
-            public static ObservableCollection<Tehtävä> LueKesken()
-            {
-                try
-                {
-                    var json_muoto1 = File.ReadAllText(tiedostonimi);
-                    var klista = JsonSerializer.Deserialize<ObservableCollection<Tehtävä>>(json_muoto1);
-                    if (klista == null)
-                        return new ObservableCollection<Tehtävä>();
-                    return klista;
-                }
-                catch
-                {
-                    return new ObservableCollection<Tehtävä>();
-                }
-
+                Window2 win2 = new Window2(tehtävä);
+                win2.ShowDialog();
+                kesken.Items.Refresh();
+                valmiit.Items.Refresh();
+                KTallentaja.Tallenna(klista);
+                VTallentaja.Tallenna(vlista);
             }
         }
     }

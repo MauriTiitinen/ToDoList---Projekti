@@ -48,7 +48,6 @@ namespace Projekti
             string aika = $"{tunnit}:{minuutit}";
             MainWindow main = System.Windows.Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
 
-
             if (string.IsNullOrWhiteSpace(textbox1.Text))
             {
                 System.Windows.MessageBox.Show("Laita jotain kenttii");
@@ -65,7 +64,7 @@ namespace Projekti
                     System.Windows.MessageBox.Show("Valittu aika on jo mennyt!");
                     return;
                 }
-                main.lisäätehtävä(textbox1.Text + "  " + "Muistutus: " + " " + päivä + " " + aika, selectedDateTime);
+                main.lisäätehtävä(textbox1.Text, selectedDateTime);
             }
             else
             {

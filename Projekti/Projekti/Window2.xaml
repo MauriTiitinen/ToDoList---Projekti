@@ -1,0 +1,64 @@
+﻿<Window x:Class="Projekti.Window2"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Projekti"
+        mc:Ignorable="d"
+        Title="Window2" Height="400" Width="400">
+
+    <Grid>
+        <Label Margin="40,26,260,330" Content="Tehtävä:"/>
+        <TextBox x:Name="textbox2" Margin="40,59,40,263" FontSize="14"/>
+        <Label Margin="40,121,283,234" Content="Muistutus:"/>
+        <DatePicker x:Name="Päivämäärä1" Margin="40,150,40,185"/>
+        <Button Margin="116,272,116,48" Click="tallenna_Click" Content="Tallenna"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,215,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <ComboBox x:Name="Tunnit" Width="60">
+                    <ComboBoxItem Content=""/>
+                    <ComboBoxItem Content="00"/>
+                    <ComboBoxItem Content="01"/>
+                    <ComboBoxItem Content="02"/>
+                    <ComboBoxItem Content="03"/>
+                    <ComboBoxItem Content="04"/>
+                    <ComboBoxItem Content="05"/>
+                    <ComboBoxItem Content="06"/>
+                    <ComboBoxItem Content="07"/>
+                    <ComboBoxItem Content="08"/>
+                    <ComboBoxItem Content="09"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="11"/>
+                    <ComboBoxItem Content="12"/>
+                    <ComboBoxItem Content="13"/>
+                    <ComboBoxItem Content="14"/>
+                    <ComboBoxItem Content="15"/>
+                    <ComboBoxItem Content="16"/>
+                    <ComboBoxItem Content="17"/>
+                    <ComboBoxItem Content="18"/>
+                    <ComboBoxItem Content="19"/>
+                    <ComboBoxItem Content="20"/>
+                    <ComboBoxItem Content="21"/>
+                    <ComboBoxItem Content="22"/>
+                    <ComboBoxItem Content="23"/>
+                </ComboBox>
+                <TextBlock Text=":" VerticalAlignment="Center" Margin="5,0"/>
+                <ComboBox x:Name="Minuutit" Width="60">
+                    <ComboBoxItem Content=""/>
+                    <ComboBoxItem Content="00"/>
+                    <ComboBoxItem Content="05"/>
+                    <ComboBoxItem Content="10"/>
+                    <ComboBoxItem Content="15"/>
+                    <ComboBoxItem Content="20"/>
+                    <ComboBoxItem Content="25"/>
+                    <ComboBoxItem Content="30"/>
+                    <ComboBoxItem Content="35"/>
+                    <ComboBoxItem Content="40"/>
+                    <ComboBoxItem Content="45"/>
+                    <ComboBoxItem Content="50"/>
+                    <ComboBoxItem Content="55"/>
+                </ComboBox>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
