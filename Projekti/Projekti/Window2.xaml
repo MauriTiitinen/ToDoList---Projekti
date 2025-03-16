@@ -5,17 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Projekti"
         mc:Ignorable="d"
-        Title="Window2" Height="400" Width="400">
+        Title="Editointi" Height="400" Width="400">
 
     <Grid>
-        <Label Margin="40,26,260,330" Content="Tehtävä:"/>
-        <TextBox x:Name="textbox2" Margin="40,59,40,263" FontSize="14"/>
-        <Label Margin="40,121,283,234" Content="Muistutus:"/>
-        <DatePicker x:Name="Päivämäärä1" Margin="40,150,40,185"/>
+        <TextBox x:Name="textbox2" Margin="40,47,40,250" FontSize="14"/>
+        <DatePicker x:Name="Päivämäärä1" Margin="40,160,40,175"/>
         <Button Margin="200,284,49,36" Click="tallenna_Click" Content="Tallenna"/>
         <Button Content="Peruuta" Margin="40,284,209,37"  Click="Peruuta_Clicked"/>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,215,0,0">
-            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,240,0,0">
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" RenderTransformOrigin="0.505,1.423">
                 <ComboBox x:Name="Tunnit" Width="60">
                     <ComboBoxItem Content=""/>
                     <ComboBoxItem Content="00"/>
@@ -61,6 +59,9 @@
                 </ComboBox>
             </StackPanel>
         </StackPanel>
-        
+        <Label Content="Tehtävä:" HorizontalAlignment="Left" Height="26" Margin="40,21,0,0" VerticalAlignment="Top" Width="82"/>
+        <Label Content="Päivämäärä:" HorizontalAlignment="Left" Height="26" Margin="40,134,0,0" VerticalAlignment="Top" Width="112"/>
+        <Label Content="Aika:" HorizontalAlignment="Left" Height="31" Margin="76,235,0,0" VerticalAlignment="Top" Width="40"/>
+
     </Grid>
 </Window>
