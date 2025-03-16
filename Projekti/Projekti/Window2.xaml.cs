@@ -36,7 +36,12 @@ namespace Projekti
         }
         private void tallenna_Click(object sender, RoutedEventArgs e)
         {
-            if (Päivämäärä1.SelectedDate.HasValue && !string.IsNullOrEmpty(Tunnit.Text) && !string.IsNullOrEmpty(Minuutit.Text))
+            if (Päivämäärä1.SelectedDate <= DateTime.Now)
+            {
+                System.Windows.MessageBox.Show("Valittu aika on jo mennyt!");
+                return;
+            }
+            else if (Päivämäärä1.SelectedDate.HasValue && !string.IsNullOrEmpty(Tunnit.Text) && !string.IsNullOrEmpty(Minuutit.Text))
             {
                 int hour = int.Parse(Tunnit.Text);
                 int minute = int.Parse(Minuutit.Text);
@@ -48,6 +53,11 @@ namespace Projekti
             }
 
             _task.TaskName = textbox2.Text;
+            Close();
+        }
+
+        private void Peruuta_Clicked(object sender, RoutedEventArgs e)
+        {
             Close();
         }
     }

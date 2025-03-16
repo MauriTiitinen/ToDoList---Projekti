@@ -72,5 +72,10 @@ namespace Projekti
             }
             textbox1.Clear();
         }
+
+        private void Poistu_Clicked(object sender, RoutedEventArgs e)
+        {
+            Close();
+        }
     }
 }

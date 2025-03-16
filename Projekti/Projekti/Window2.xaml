@@ -12,7 +12,8 @@
         <TextBox x:Name="textbox2" Margin="40,59,40,263" FontSize="14"/>
         <Label Margin="40,121,283,234" Content="Muistutus:"/>
         <DatePicker x:Name="Päivämäärä1" Margin="40,150,40,185"/>
-        <Button Margin="116,272,116,48" Click="tallenna_Click" Content="Tallenna"/>
+        <Button Margin="200,284,49,36" Click="tallenna_Click" Content="Tallenna"/>
+        <Button Content="Peruuta" Margin="40,284,209,37"  Click="Peruuta_Clicked"/>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,215,0,0">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
                 <ComboBox x:Name="Tunnit" Width="60">
@@ -60,5 +61,6 @@
                 </ComboBox>
             </StackPanel>
         </StackPanel>
+        
     </Grid>
 </Window>
