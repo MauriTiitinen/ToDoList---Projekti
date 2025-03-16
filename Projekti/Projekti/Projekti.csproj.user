@@ -7,15 +7,6 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="AdvancedSettings.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="AppearanceSettings.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Update="GeneralSettings.xaml.cs">
-      <SubType>Code</SubType>
-    </Compile>
     <Compile Update="Window1.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -24,15 +15,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Page Update="AdvancedSettings.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="AppearanceSettings.xaml">
-      <SubType>Designer</SubType>
-    </Page>
-    <Page Update="GeneralSettings.xaml">
-      <SubType>Designer</SubType>
-    </Page>
     <Page Update="MainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>

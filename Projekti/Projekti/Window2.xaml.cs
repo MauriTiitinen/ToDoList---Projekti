@@ -36,16 +36,17 @@ namespace Projekti
         }
         private void tallenna_Click(object sender, RoutedEventArgs e)
         {
-            if (Päivämäärä1.SelectedDate <= DateTime.Now)
-            {
-                System.Windows.MessageBox.Show("Valittu aika on jo mennyt!");
-                return;
-            }
-            else if (Päivämäärä1.SelectedDate.HasValue && !string.IsNullOrEmpty(Tunnit.Text) && !string.IsNullOrEmpty(Minuutit.Text))
+          
+            if (Päivämäärä1.SelectedDate.HasValue && !string.IsNullOrEmpty(Tunnit.Text) && !string.IsNullOrEmpty(Minuutit.Text))
             {
                 int hour = int.Parse(Tunnit.Text);
                 int minute = int.Parse(Minuutit.Text);
                 _task.ReminderTime = Päivämäärä1.SelectedDate.Value.AddHours(hour).AddMinutes(minute);
+                if (_task.ReminderTime <= DateTime.Now)
+                {
+                    System.Windows.MessageBox.Show("Valittu aika on jo mennyt!");
+                    return;
+                }
             }
             else
             {
