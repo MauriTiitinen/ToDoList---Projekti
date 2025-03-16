@@ -1,23 +1,7 @@
-﻿using System;
-using System.Collections.ObjectModel;
-using System.Text;
+﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using System.Windows.Threading;
-using System.Windows.Forms;
-
-
-
-
-
-
 
 
 namespace Projekti
@@ -33,6 +17,7 @@ namespace Projekti
         private NotifyIcon notifyIcon;
 
         private ContextMenu settingsMenu;
+        
         public MainWindow()
         {
             InitializeComponent();
@@ -44,26 +29,15 @@ namespace Projekti
 
             settingsMenu = new ContextMenu();
 
-            // Create menu items
-            MenuItem generalItem = new MenuItem { Header = "General Settings" };
-            generalItem.Click += GeneralSettings_Click;
+            System.Windows.Controls.CheckBox Theme = new System.Windows.Controls.CheckBox { Content = "Theme 1" };
+            Theme.Checked += Theme_Checked;
+            Theme.Unchecked += Theme_UnChecked;
 
-            MenuItem appearanceItem = new MenuItem { Header = "Appearance Settings" };
-            appearanceItem.Click += AppearanceSettings_Click;
-
-            MenuItem advancedItem = new MenuItem { Header = "Advanced Settings" };
-            advancedItem.Click += AdvancedSettings_Click;
-
-            // Add items to the menu
-            settingsMenu.Items.Add(generalItem);
-            settingsMenu.Items.Add(appearanceItem);
-            settingsMenu.Items.Add(advancedItem);
+            settingsMenu.Items.Add(Theme);   
 
             countdownTimer = new DispatcherTimer { Interval = TimeSpan.FromSeconds(1) };
             countdownTimer.Tick += CountdownCheck;
             countdownTimer.Start();
-
-           
         }
         private void notifikaatio()
         {
@@ -72,7 +46,7 @@ namespace Projekti
                 Icon = SystemIcons.Information,
                 Visible = true,
                 BalloonTipTitle = "To-Do list",
-                BalloonTipText = "Nonnii teeppä niitä tehtäviä",
+                BalloonTipText = "Tehtävän aikaraja on tullut vastaan",
                 BalloonTipIcon = ToolTipIcon.Info
             };
 
@@ -80,7 +54,6 @@ namespace Projekti
         }
         private void SettingsButton_Click(object sender, RoutedEventArgs e)
         {
-            // Toggle the menu
             if (settingsMenu.IsOpen)
             {
                 settingsMenu.IsOpen = false;
@@ -88,36 +61,52 @@ namespace Projekti
             else
             {
                 settingsMenu.PlacementTarget = sender as System.Windows.Controls.Button;
-                settingsMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom; // Menu opens downward
+                settingsMenu.Placement = System.Windows.Controls.Primitives.PlacementMode.Bottom; 
                 settingsMenu.IsOpen = true;
             }
         }
-
-        private void GeneralSettings_Click(object sender, RoutedEventArgs e)
+        private void Theme_Checked(object sender, RoutedEventArgs e)
         {
+            this.Background = System.Windows.Media.Brushes.DarkGray;
+            grid.Background = System.Windows.Media.Brushes.DarkSlateGray;
+            kesken.Background = System.Windows.Media.Brushes.DimGray;
+            valmiit.Background = System.Windows.Media.Brushes.DimGray;
+            kesken.Foreground = System.Windows.Media.Brushes.White;
+            valmiit.Foreground = System.Windows.Media.Brushes.White;
+            LisääT.Background = System.Windows.Media.Brushes.DimGray;
+            LisääT.Foreground = System.Windows.Media.Brushes.White;
+            val.Foreground = System.Windows.Media.Brushes.White;
+            kes.Foreground = System.Windows.Media.Brushes.White;
+            ots.Foreground = System.Windows.Media.Brushes.White;
+            Kello.Foreground = System.Windows.Media.Brushes.White;
+            Paiva.Foreground = System.Windows.Media.Brushes.White;
+            SettingsButton.Background = System.Windows.Media.Brushes.DimGray;
+            SettingsButton.Foreground = System.Windows.Media.Brushes.White;
             
-            GeneralSettings generalSetting = new GeneralSettings();
-            generalSetting.Show();
         }
-
-        private void AppearanceSettings_Click(object sender, RoutedEventArgs e)
+        private void Theme_UnChecked(object sender, RoutedEventArgs e)
         {
-            AppearanceSettings appearancesetting = new AppearanceSettings();
-            appearancesetting.Show();
+            this.Background = System.Windows.Media.Brushes.White;
+            grid.Background = System.Windows.Media.Brushes.Bisque;
+            kesken.Background = System.Windows.Media.Brushes.White;
+            valmiit.Background = System.Windows.Media.Brushes.White;
+            kesken.Foreground = System.Windows.Media.Brushes.Black;
+            valmiit.Foreground = System.Windows.Media.Brushes.Black;
+            LisääT.Background = System.Windows.Media.Brushes.White;
+            LisääT.Foreground = System.Windows.Media.Brushes.Black;
+            val.Foreground = System.Windows.Media.Brushes.Black;
+            kes.Foreground = System.Windows.Media.Brushes.Black;
+            ots.Foreground = System.Windows.Media.Brushes.Black;
+            Kello.Foreground = System.Windows.Media.Brushes.Black;
+            Paiva.Foreground = System.Windows.Media.Brushes.Black;
+            SettingsButton.Background = System.Windows.Media.Brushes.White;
+            SettingsButton.Foreground = System.Windows.Media.Brushes.Black;
         }
-
-        private void AdvancedSettings_Click(object sender, RoutedEventArgs e)
-        {
-            AdvancedSettings advancedSetting = new AdvancedSettings();
-            advancedSetting.Show();
-        }
-        
         public void lisäätehtävä(string nimi, DateTime? remindertime)
         {
             Tehtävä tehtävä = new Tehtävä(nimi, remindertime);
             klista.Add(tehtävä);
             KTallentaja.Tallenna(klista);
-            
         }
         public class Tehtävä
         {

@@ -6,12 +6,12 @@
         xmlns:local="clr-namespace:Projekti"
         mc:Ignorable="d"
         Title="Etusivu" Height="500" Width="800">
-    <Grid Background="#FFE4DBBC">
-        <Label x:Name="Kello" HorizontalAlignment="Left" Margin="270,357,0,0" VerticalAlignment="Top" Width="104" Height="33" Grid.Column="1"/>
-        <Label x:Name="Paiva" FontSize="14" HorizontalAlignment="Left" Margin="237,401,0,10" Width="115" Grid.Column="1"/>
-        <Label Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="237,7,0,0" VerticalAlignment="Top" Width="142" FontSize="24" Background="#FFBBB7B7" AutomationProperties.IsOffscreenBehavior="Onscreen" FontWeight="Bold"/>
-        <Label Content="Kesken olevat tehtävät" HorizontalAlignment="Left" Height="33" Margin="237,66,0,0" VerticalAlignment="Top" Width="156" FontSize="14"/>
-        <Label Content="Valmiit tehtävät" HorizontalAlignment="Left" Height="29" Margin="255,264,0,0" VerticalAlignment="Top" Width="106" FontSize="14" RenderTransformOrigin="0.5,0.5"/>
+    <Grid Name="grid" Background="Bisque">
+        <Label x:Name="Kello" HorizontalAlignment="Left" Margin="691,355,0,0" VerticalAlignment="Top" Width="81" Height="33"/>
+        <Label x:Name="Paiva" FontSize="14" HorizontalAlignment="Left" Margin="664,393,0,18" Width="115"/>
+        <Label Name="ots" Content="TO-DO LIST" HorizontalAlignment="Left" Height="47" Margin="237,7,0,0" VerticalAlignment="Top" Width="142" FontSize="24" AutomationProperties.IsOffscreenBehavior="Onscreen" FontWeight="Bold"/>
+        <Label Name="kes" Content="Kesken olevat tehtävät" HorizontalAlignment="Left" Height="33" Margin="237,66,0,0" VerticalAlignment="Top" Width="156" FontSize="14"/>
+        <Label Name="val" Content="Valmiit tehtävät" HorizontalAlignment="Left" Height="29" Margin="255,264,0,0" VerticalAlignment="Top" Width="106" FontSize="14" RenderTransformOrigin="0.5,0.5"/>
         <ListBox Name="kesken" Margin="20,100,190,214" RenderTransformOrigin="0.5,0.5">
             <ListBox.ItemTemplate>
                 <DataTemplate>
@@ -19,8 +19,8 @@
                         <CheckBox IsChecked="False" Checked="CheckBox_Checked"/>
                         <Button Content="Editoi" Click="edit_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
                         <Button Content="Poista" Click="poista_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
-                        <TextBlock Text="{Binding TaskName}" Margin="10, 0, 0, 0" FontSize="14"/>
-                        <TextBlock Text="{Binding ReminderTime, StringFormat='dd.MM.yyyy HH:mm'}" Margin="10, 0, 0, 0" FontSize="14"/>
+                        <TextBlock Text="{Binding TaskName}" Margin="10, 0, 0, 0" FontSize="16"/>
+                        <TextBlock Text="{Binding ReminderTime, StringFormat='dd.MM.yyyy HH:mm'}" Margin="10, 0, 0, 0" FontSize="16"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
@@ -32,20 +32,20 @@
                         <CheckBox IsChecked="True" Unchecked="CheckBox_Unchecked"/>
                         <Button Content="Editoi" Click="edit_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
                         <Button Content="Poista" Click="poista_Click" Tag="{Binding}" Margin="10, 0, 0, 0"/>
-                        <TextBlock Text="{Binding TaskName}" Margin="10, 0, 0, 0" FontSize="14"/>
-                        <TextBlock Text="{Binding ReminderTime, StringFormat='dd.MM.yyyy HH:mm'}" Margin="10, 0, 0, 0" FontSize="14"/>
+                        <TextBlock Text="{Binding TaskName}" Margin="10, 0, 0, 0" FontSize="16"/>
+                        <TextBlock Text="{Binding ReminderTime, StringFormat='dd.MM.yyyy HH:mm'}" Margin="10, 0, 0, 0" FontSize="16"/>
                     </StackPanel>
                 </DataTemplate>
             </ListBox.ItemTemplate>
         </ListBox>
-        <Button Content="Lisää uusi &#xA;tehtävä&#xA;" HorizontalAlignment="Left" Height="60" Margin="637,152,0,0" VerticalAlignment="Top" Width="76" Click="Button_Click" FontSize="14" RenderTransformOrigin="0.508,0.443"/>
+        <Button Name ="LisääT" Content="Lisää uusi&#xD;&#xA; tehtävä&#xA;" HorizontalAlignment="Left" Height="60" Margin="639,251,0,0" VerticalAlignment="Top" Width="113" Click="Button_Click" FontSize="14" RenderTransformOrigin="0.508,0.443" Background="White"/>
 
         <Button x:Name="SettingsButton" Content="☰"
                 Width="99" Height="90"
                 HorizontalAlignment="Right" VerticalAlignment="Top"
                 Margin="0,9,10,0" Click="SettingsButton_Click"
                 Foreground="Black"
-                FontSize="24" Grid.Column="1"/>
+                FontSize="24" Grid.Column="1" Background="White"/>
 
 
 
